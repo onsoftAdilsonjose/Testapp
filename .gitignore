@@ -6,7 +6,7 @@
 /vendor
 /env
 /Onschool_Api_Backend.zip
-/.env
+.env
 .phpunit.result.cache
 docker-compose.override.yml
 Homestead.json
