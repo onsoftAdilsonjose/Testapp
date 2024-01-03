@@ -1,0 +1,5 @@
+php artisan db:seed --class=PermissionSeeder
+php artisan db:seed --class=RolesAndPermissionsSeeder
+php artisan l5-swagger:generate
+
+o erro vinha era so trocar app de app the bag = false

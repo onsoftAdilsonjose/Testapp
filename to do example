@@ -1,0 +1,49 @@
+-------------------------------------------------------------------------------------------------Estudante
+Bibioteca Virtual 
+------------------
+------------------
+Ver Faltas
+Processo disciplinar
+Quadro de Honra.
+------------------
+
+Solicitar declarcoes
+Solicitar Certificado
+---------------------
+
+
+Consultar pagamentos
+
+---------------
+ Multas e Prazos 
+ ---------------
+ Extrato Finaceiro
+ ---------------------
+ Alterar Contactos
+ Email
+ phone
+ morada
+ -----------------------------------------------------------------------------------------
+
+QuadrodeHonraController------------------
+FaltaController------------------------
+ProcessoDisciplinarCotroller-----------
+
+
+ nas faltas do estudante e necessario ter um contar de falatas sobre as disciplinas e o total das faltas em geral
+
+
+
+
+
+
+-----consultar pagamentos---
+ os detalhes de pagamento que foram, feitos 
+ Multa meses com Multa-----
+ so podem aparcer os meses que se multas...
+ -----
+
+ -----Extrato Finaceiro -----
+ filtrar os pagamentos consuante as  datas...
+ que forem estipulados.
+  

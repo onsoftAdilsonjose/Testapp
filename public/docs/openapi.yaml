@@ -1,0 +1,1819 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/updatePassword:
+    post:
+      summary: ''
+      operationId: postApiUpdatePassword
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                current_password:
+                  type: string
+                  description: ''
+                  example: consectetur
+                password:
+                  type: string
+                  description: 'Must be at least 8 characters.'
+                  example: '@[#1x7g<}Q6H@JWdfgI'
+              required:
+                - current_password
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: ''
+      operationId: postApiLogout
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/refresh:
+    post:
+      summary: ''
+      operationId: postApiRefresh
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/Admin/Register:
+    post:
+      summary: ''
+      operationId: postApiAdminRegister
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/Admin/resetPassword:
+    post:
+      summary: ''
+      operationId: postApiAdminResetPassword
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  /api/Admin/addPermissionToUser:
+    post:
+      summary: ''
+      operationId: postApiAdminAddPermissionToUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/removePermission/{userId}/FromUser/{permissionId}':
+    get:
+      summary: ''
+      operationId: getApiAdminRemovePermissionUserIdFromUserPermissionId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: velit
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: permissionId
+        description: ''
+        example: facere
+        required: true
+        schema:
+          type: string
+  '/api/Admin/showUserPermissions/{userId}':
+    get:
+      summary: ''
+      operationId: getApiAdminShowUserPermissionsUserId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: incidunt
+        required: true
+        schema:
+          type: string
+  /api/Admin/addPermissionToRole:
+    post:
+      summary: ''
+      operationId: postApiAdminAddPermissionToRole
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/removePermission/{roleId}/FromRole/{permissionId}':
+    get:
+      summary: ''
+      operationId: getApiAdminRemovePermissionRoleIdFromRolePermissionId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: roleId
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: permissionId
+        description: ''
+        example: explicabo
+        required: true
+        schema:
+          type: string
+  '/api/Admin/showRolePermissions/{userId}':
+    get:
+      summary: ''
+      operationId: getApiAdminShowRolePermissionsUserId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: userId
+        description: ''
+        example: totam
+        required: true
+        schema:
+          type: string
+  /api/Admin/Permission:
+    get:
+      summary: ''
+      operationId: getApiAdminPermission
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/Permission/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminPermissionId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the Permission.'
+        example: nemo
+        required: true
+        schema:
+          type: string
+  /api/Admin/StorePermission:
+    post:
+      summary: ''
+      operationId: postApiAdminStorePermission
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: impedit
+                description:
+                  type: string
+                  description: ''
+                  example: 'Vel ad necessitatibus voluptas blanditiis ut est mollitia.'
+                slug:
+                  type: string
+                  description: ''
+                  example: quis
+              required:
+                - name
+                - slug
+      security: []
+  '/api/Admin/ActualizarPermission/{id}':
+    post:
+      summary: ''
+      operationId: postApiAdminActualizarPermissionId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: quibusdam
+                description:
+                  type: string
+                  description: ''
+                  example: 'Temporibus molestias voluptatem corporis et nostrum non dolorem est.'
+                slug:
+                  type: string
+                  description: ''
+                  example: inventore
+              required:
+                - name
+                - slug
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the ActualizarPermission.'
+        example: dolorum
+        required: true
+        schema:
+          type: string
+  '/api/Admin/ApagarPermission/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminApagarPermissionId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the ApagarPermission.'
+        example: in
+        required: true
+        schema:
+          type: string
+  /api/Admin/verAnolectivo:
+    get:
+      summary: 'Exibir uma listagem do recurso.'
+      operationId: exibirUmaListagemDoRecurso
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoAnolectivo/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoAnolectivo.'
+        example: sint
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeAnolectivo:
+    post:
+      summary: ''
+      operationId: postApiAdminStoreAnolectivo
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                inicio:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-25T09:56:01'
+                fim:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-25T09:56:01'
+              required:
+                - inicio
+                - fim
+      security: []
+  '/api/Admin/updateAnolectivo/{id}':
+    post:
+      summary: ''
+      operationId: postApiAdminUpdateAnolectivoId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                inicio:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-25T09:56:01'
+                fim:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-25T09:56:01'
+              required:
+                - inicio
+                - fim
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateAnolectivo.'
+        example: in
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteAnolectivo/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminDeleteAnolectivoId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteAnolectivo.'
+        example: quas
+        required: true
+        schema:
+          type: string
+  /api/Admin/verClasse:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoClasse/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoClasse.'
+        example: nobis
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeClasse:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                classe_name:
+                  type: string
+                  description: 'Must not be greater than 25 characters.'
+                  example: ubrfmdlqxlammgprsxyna
+                ClassComExam:
+                  type: integer
+                  description: ''
+                  example: 19
+              required:
+                - classe_name
+      security: []
+  '/api/Admin/updateClasse/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                classe_name:
+                  type: string
+                  description: ''
+                  example: null
+                ClassComExam:
+                  type: integer
+                  description: ''
+                  example: 7
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateClasse.'
+        example: reiciendis
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteClasse/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteClasse.'
+        example: perspiciatis
+        required: true
+        schema:
+          type: string
+  /api/Admin/verCurso:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoCurso/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoCurso.'
+        example: sed
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeCurso:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeCurso:
+                  type: string
+                  description: ''
+                  example: eveniet
+                anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 18
+                classe_id:
+                  type: integer
+                  description: ''
+                  example: 6
+                Pagamento_anual:
+                  type: number
+                  description: ''
+                  example: 9693.118
+                ConfirmacaoPreco:
+                  type: number
+                  description: ''
+                  example: 124722823.54837
+                MatriculaPreco:
+                  type: number
+                  description: ''
+                  example: 27743.7266
+              required:
+                - nomeCurso
+                - anolectivo_id
+                - classe_id
+                - Pagamento_anual
+                - ConfirmacaoPreco
+                - MatriculaPreco
+      security: []
+  '/api/Admin/updateCurso/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeCurso:
+                  type: string
+                  description: ''
+                  example: null
+                anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 4
+                classe_id:
+                  type: integer
+                  description: ''
+                  example: 10
+                Pagamento_anual:
+                  type: number
+                  description: ''
+                  example: 175959.3
+                ConfirmacaoPreco:
+                  type: number
+                  description: ''
+                  example: 0.476103076
+                MatriculaPreco:
+                  type: number
+                  description: ''
+                  example: 8221574.3484288
+              required:
+                - anolectivo_id
+                - classe_id
+                - Pagamento_anual
+                - ConfirmacaoPreco
+                - MatriculaPreco
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateCurso.'
+        example: sunt
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteCurso/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteCurso.'
+        example: earum
+        required: true
+        schema:
+          type: string
+  /api/Admin/verTurma:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoTurma/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoTurma.'
+        example: soluta
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeTurma:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeTurma:
+                  type: string
+                  description: ''
+                  example: nemo
+              required:
+                - nomeTurma
+      security: []
+  '/api/Admin/updateTurma/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeTurma:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateTurma.'
+        example: praesentium
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteTurma/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteTurma.'
+        example: maiores
+        required: true
+        schema:
+          type: string
+  /api/Admin/verPeriodo:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoPeriodo/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoPeriodo.'
+        example: nisi
+        required: true
+        schema:
+          type: string
+  /api/Admin/storePeriodo:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomePeriodo:
+                  type: string
+                  description: ''
+                  example: repellat
+              required:
+                - nomePeriodo
+      security: []
+  '/api/Admin/updatePeriodo/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updatePeriodo.'
+        example: vel
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deletePeriodo/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deletePeriodo.'
+        example: facilis
+        required: true
+        schema:
+          type: string
+  /api/Admin/verSala:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoSala/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoSala.'
+        example: non
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeSala:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeSala:
+                  type: string
+                  description: ''
+                  example: enim
+              required:
+                - nomeSala
+      security: []
+  '/api/Admin/updateSala/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeSala:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateSala.'
+        example: velit
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteSala/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteSala.'
+        example: voluptas
+        required: true
+        schema:
+          type: string
+  /api/Admin/verDisciplina:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoDisciplina/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoDisciplina.'
+        example: consequatur
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeDisciplina:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeDisciplina:
+                  type: string
+                  description: ''
+                  example: autem
+              required:
+                - nomeDisciplina
+      security: []
+  '/api/Admin/updateDisciplina/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nomeDisciplina:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateDisciplina.'
+        example: dolorum
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteDisciplina/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteDisciplina.'
+        example: et
+        required: true
+        schema:
+          type: string
+  /api/Admin/verTipoDisciplina:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoTipoDisciplina/{id}':
+    get:
+      summary: 'Display the specified resource.'
+      operationId: displayTheSpecifiedResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoTipoDisciplina.'
+        example: sint
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeTipoDisciplina:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                TipoNome:
+                  type: string
+                  description: ''
+                  example: et
+              required:
+                - TipoNome
+      security: []
+  '/api/Admin/updateTipoDisciplina/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                TipoNome:
+                  type: string
+                  description: ''
+                  example: null
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateTipoDisciplina.'
+        example: ex
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteTipoDisciplina/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteTipoDisciplina.'
+        example: atque
+        required: true
+        schema:
+          type: string
+  /api/Admin/verDisciplinaParaClasse:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  /api/Admin/storeDisciplinaParaClasse:
+    post:
+      summary: 'Store a newly created resource in storage.'
+      operationId: storeANewlyCreatedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Classe_id:
+                  type: integer
+                  description: ''
+                  example: 13
+                Curso_id:
+                  type: integer
+                  description: ''
+                  example: 4
+                Turma_id:
+                  type: integer
+                  description: ''
+                  example: 7
+                Anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                Sala_id:
+                  type: integer
+                  description: ''
+                  example: 7
+                Periodo_id:
+                  type: integer
+                  description: ''
+                  example: 2
+                Professor_id:
+                  type: integer
+                  description: ''
+                  example: 7
+                Disciplina_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                TipodeDisciplina_id:
+                  type: integer
+                  description: ''
+                  example: 14
+              required:
+                - Classe_id
+                - Curso_id
+                - Turma_id
+                - Anolectivo_id
+                - Sala_id
+                - Periodo_id
+                - Professor_id
+                - Disciplina_id
+                - TipodeDisciplina_id
+      security: []
+  '/api/Admin/updateDisciplinaParaClasse/{id}':
+    post:
+      summary: 'Update the specified resource in storage.'
+      operationId: updateTheSpecifiedResourceInStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                Classe_id:
+                  type: integer
+                  description: ''
+                  example: 7
+                Curso_id:
+                  type: integer
+                  description: ''
+                  example: 19
+                Turma_id:
+                  type: integer
+                  description: ''
+                  example: 17
+                Anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 20
+                Sala_id:
+                  type: integer
+                  description: ''
+                  example: 12
+                Periodo_id:
+                  type: integer
+                  description: ''
+                  example: 14
+                Professor_id:
+                  type: integer
+                  description: ''
+                  example: 14
+                Disciplina_id:
+                  type: integer
+                  description: ''
+                  example: 13
+                TipodeDisciplina_id:
+                  type: integer
+                  description: ''
+                  example: 19
+              required:
+                - Classe_id
+                - Curso_id
+                - Turma_id
+                - Anolectivo_id
+                - Sala_id
+                - Periodo_id
+                - Professor_id
+                - Disciplina_id
+                - TipodeDisciplina_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateDisciplinaParaClasse.'
+        example: sapiente
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteDisciplinaParaClasse/{id}':
+    delete:
+      summary: 'Remove the specified resource from storage.'
+      operationId: removeTheSpecifiedResourceFromStorage
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteDisciplinaParaClasse.'
+        example: quam
+        required: true
+        schema:
+          type: string
+  /api/Admin/verEstudanteParaClasse:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+  '/api/Admin/verUnicoEstudante/{id}':
+    get:
+      summary: ''
+      operationId: getApiAdminVerUnicoEstudanteId
+      description: ''
+      parameters: []
+      responses:
+        500:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: 'Erro do Servidor Interno'
+                properties:
+                  message:
+                    type: string
+                    example: 'Erro do Servidor Interno'
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the verUnicoEstudante.'
+        example: expedita
+        required: true
+        schema:
+          type: string
+  /api/Admin/storeEstudanteParaClasse:
+    post:
+      summary: ''
+      operationId: postApiAdminStoreEstudanteParaClasse
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                student_id:
+                  type: integer
+                  description: ''
+                  example: 15
+                Periodo_id:
+                  type: integer
+                  description: ''
+                  example: 13
+                Turma_id:
+                  type: integer
+                  description: ''
+                  example: 4
+                Sala_id:
+                  type: integer
+                  description: ''
+                  example: 9
+                Classe_id:
+                  type: integer
+                  description: ''
+                  example: 2
+                Curso_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                Anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 8
+              required:
+                - student_id
+                - Periodo_id
+                - Turma_id
+                - Sala_id
+                - Classe_id
+                - Curso_id
+                - Anolectivo_id
+      security: []
+  '/api/Admin/updateEstudanteParaClasse/{id}':
+    post:
+      summary: ''
+      operationId: postApiAdminUpdateEstudanteParaClasseId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                student_id:
+                  type: integer
+                  description: ''
+                  example: 6
+                Periodo_id:
+                  type: integer
+                  description: ''
+                  example: 16
+                Turma_id:
+                  type: integer
+                  description: ''
+                  example: 1
+                Sala_id:
+                  type: integer
+                  description: ''
+                  example: 3
+                Classe_id:
+                  type: integer
+                  description: ''
+                  example: 11
+                Curso_id:
+                  type: integer
+                  description: ''
+                  example: 10
+                Anolectivo_id:
+                  type: integer
+                  description: ''
+                  example: 2
+              required:
+                - student_id
+                - Periodo_id
+                - Turma_id
+                - Sala_id
+                - Classe_id
+                - Curso_id
+                - Anolectivo_id
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the updateEstudanteParaClasse.'
+        example: excepturi
+        required: true
+        schema:
+          type: string
+  '/api/Admin/deleteEstudanteParaClasse/{id}':
+    delete:
+      summary: ''
+      operationId: deleteApiAdminDeleteEstudanteParaClasseId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the deleteEstudanteParaClasse.'
+        example: aut
+        required: true
+        schema:
+          type: string
+tags:
+  -
+    name: Endpoints
+    description: ''

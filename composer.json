@@ -1,0 +1,102 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.1",
+        "barryvdh/laravel-dompdf": "^2.0",
+        "darkaonline/l5-swagger": "^8.5",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "haruncpi/laravel-id-generator": "^1.1",
+        "kwn/number-to-words": "^2.6",
+        "laravel/framework": "^8.75",
+        "laravel/sanctum": "^2.11",
+        "laravel/tinker": "^2.5",
+        "milon/barcode": "^10.0",
+        "nao-pon/flysystem-google-drive": "~1.1",
+        "spatie/laravel-backup": "^6.14",
+        "twilio/sdk": "^7.5",
+        "tymon/jwt-auth": "^1.0@dev"
+    },
+    "require-dev": {
+        "facade/ignition": "^2.5",
+        "fakerphp/faker": "^1.9.1",
+        "friendsofphp/php-cs-fixer": "^3.14",
+        "knuckleswtf/scribe": "^4.22",
+        "laravel/sail": "^1.0.1",
+        "lucascudo/laravel-pt-br-localization": "^2.0",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^5.10",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        },
+           "files":[
+            "app/MyCustomFuctions/MinhasFuncoes.php",
+            "app/MyCustomFuctions/Pagamento.php",
+            "app/MyCustomFuctions/Months.php",
+            "app/MyCustomFuctions/Notification.php",
+            "app/MyCustomFuctions/Key.php",
+            "app/MyCustomFuctions/MatricularEstudante.php",
+            "app/MyCustomFuctions/AprovadoOrReprovado.php", 
+            "app/MyCustomFuctions/Anolectivo.php",
+            "app/MyCustomFuctions/RoleFuc.php",
+            "app/MyCustomFuctions/Customised.php",
+            "app/MyCustomFuctions/paisesProvinciaMunicipio.php",
+            "app/Helpers/ajuda.php",
+            "app/Helpers/Docs.php",
+            "app/Helpers/Enacarregado.php",
+            "app/Helpers/Trimestre.php",
+            "app/Estudante/EstudanteInfounico.php", 
+            "app/Professor/Professorfunctions.php",
+            "app/Encarregado/EncarregadoFunctions.php",
+            "app/Pagamentos/PagarFunctionExtras.php",
+            "app/Pagamentos/RelatorioFunctionExtras.php",
+            "app/Pagamentos/CancelarFunctionExtras.php",
+            "app/Http/Controllers/Admin/Relatorio/RelatorionFunctions.php"
+
+
+
+        ]
+
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
